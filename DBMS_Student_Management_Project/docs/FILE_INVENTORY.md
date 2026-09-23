@@ -1,0 +1,33 @@
+# File Inventory
+
+- `.gitignore`
+- `README.md`
+- `database/README.md`
+- `database/admin.sql`
+- `database/backup_restore.md`
+- `database/queries.sql`
+- `database/student_management.sql`
+- `demo/dashboard.html`
+- `demo/demo.css`
+- `demo/enrollments.html`
+- `demo/results.html`
+- `demo/students.html`
+- `docs/ER_Diagram.png`
+- `docs/er_diagram.dot`
+- `docs/topic_coverage.md`
+- `public/assets/style.css`
+- `public/config.example.php`
+- `public/courses.php`
+- `public/db.php`
+- `public/departments.php`
+- `public/enrollments.php`
+- `public/index.php`
+- `public/partials/footer.php`
+- `public/partials/header.php`
+- `public/results.php`
+- `public/students.php`
+- `report/DBMS_Mini_Project_Report.pdf`
+- `screenshots/dashboard.png`
+- `screenshots/enrollments.png`
+- `screenshots/results.png`
+- `screenshots/students.png`
