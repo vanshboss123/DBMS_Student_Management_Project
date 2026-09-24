@@ -164,13 +164,3 @@ git push -u origin main
 ```
 
 Replace `YOUR_USERNAME` with your GitHub username. Do not commit `.env` or real database passwords.
-
-## Suggested Viva Demonstration Order
-
-1. Show the ER diagram and explain PK/FK relationships.
-2. Run `00_create_database.sql`, `01_schema.sql` and `02_seed_data.sql`.
-3. Demonstrate a student create/update/delete from the website.
-4. Show joins, functions, GROUP BY/HAVING, indexing and subqueries from `03_queries.sql`.
-5. Show the view, procedure, function and trigger definitions.
-6. Run the transaction examples and demonstrate SAVEPOINT/ROLLBACK/COMMIT.
-7. Explain the backup command and the optional role/GRANT/REVOKE commands.
