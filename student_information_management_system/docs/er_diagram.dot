@@ -1,0 +1,26 @@
+
+digraph G {
+  rankdir=LR;
+  graph [bgcolor="white", pad="0.2", nodesep="0.5", ranksep="0.8"];
+  node [shape=box, style="rounded,filled", fontname="Arial", fontsize=10, fillcolor="#EEF0FF", color="#6972E8", fontcolor="#202744", margin="0.12,0.08"];
+  edge [color="#9AA4B8", arrowsize=0.7, penwidth=1.2];
+  departments [label="departments\nPK department_id\nUQ dept_code\nUQ dept_name"];
+  programs [label="programs\nPK program_id\nFK department_id\nUQ program_code"];
+  students [label="students\nPK student_id\nFK program_id\nUQ roll_no\nUQ email"];
+  instructors [label="instructors\nPK instructor_id\nFK department_id\nUQ employee_no"];
+  courses [label="courses\nPK course_id\nFK program_id\nUQ course_code"];
+  offerings [label="course_offerings\nPK offering_id\nFK course_id\nFK instructor_id"];
+  enrollments [label="enrollments\nPK enrollment_id\nFK student_id\nFK offering_id\nUQ student+offering"];
+  attendance [label="attendance\nPK attendance_id\nFK enrollment_id"];
+  audit [label="student_audit\nPK audit_id\nFK student_id (nullable)\ntrigger log"];
+  departments -> programs [label="1 : N"];
+  programs -> students [label="1 : N"];
+  departments -> instructors [label="1 : N"];
+  programs -> courses [label="1 : N"];
+  courses -> offerings [label="1 : N"];
+  instructors -> offerings [label="1 : N"];
+  students -> enrollments [label="1 : N"];
+  offerings -> enrollments [label="1 : N"];
+  enrollments -> attendance [label="1 : N"];
+  students -> audit [label="1 : N"];
+}

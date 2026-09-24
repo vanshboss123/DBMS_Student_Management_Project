@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Information Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div><strong>SIMS</strong><span>DBMS Mini Project</span></div>
+      </div>
+      <nav>
+        <button class="nav-item active" data-view="dashboard">Dashboard</button>
+        <button class="nav-item" data-view="students">Students</button>
+        <button class="nav-item" data-view="departments">Departments</button>
+        <button class="nav-item" data-view="courses">Courses</button>
+        <button class="nav-item" data-view="enrollments">Enrollments</button>
+        <button class="nav-item" data-view="reports">Reports</button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="pill">MySQL + Express</div>
+        <small>CRUD • SQL Lab Coverage</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">DATABASE MANAGEMENT SYSTEM</div>
+          <h1 id="page-title">Dashboard</h1>
+        </div>
+        <div class="top-actions">
+          <span id="mode-badge" class="status-badge">LIVE DATABASE</span>
+          <button class="primary-btn" id="new-student-btn">+ Add Student</button>
+        </div>
+      </header>
+
+      <div id="notice" class="notice hidden"></div>
+      <section id="view-dashboard" class="view active-view"></section>
+      <section id="view-students" class="view"></section>
+      <section id="view-departments" class="view"></section>
+      <section id="view-courses" class="view"></section>
+      <section id="view-enrollments" class="view"></section>
+      <section id="view-reports" class="view"></section>
+    </main>
+  </div>
+
+  <dialog id="student-dialog">
+    <form method="dialog" id="student-form">
+      <div class="dialog-head">
+        <div><div class="eyebrow">CRUD FORM</div><h2 id="dialog-title">Add Student</h2></div>
+        <button type="button" class="icon-btn" id="close-dialog">×</button>
+      </div>
+      <input type="hidden" id="student_id">
+      <div class="form-grid">
+        <label>Roll No<input required id="roll_no"></label>
+        <label>First Name<input required id="first_name"></label>
+        <label>Last Name<input required id="last_name"></label>
+        <label>Email<input type="email" required id="email"></label>
+        <label>Phone<input id="phone"></label>
+        <label>Date of Birth<input type="date" id="dob"></label>
+        <label>Gender<select id="gender"><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></label>
+        <label>Admission Date<input type="date" id="admission_date"></label>
+        <label>Program<select required id="program_id"></select></label>
+        <label>Status<select id="status"><option>Active</option><option>Inactive</option><option>Graduated</option><option>Suspended</option></select></label>
+        <label>City<input id="city" value="Nagpur"></label>
+        <label>State<input id="state" value="Maharashtra"></label>
+        <label>PIN Code<input id="pin_code"></label>
+        <label class="full">Address<input id="address_line"></label>
+      </div>
+      <div class="dialog-actions">
+        <button type="button" class="secondary-btn" id="cancel-dialog">Cancel</button>
+        <button type="submit" class="primary-btn">Save Student</button>
+      </div>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>

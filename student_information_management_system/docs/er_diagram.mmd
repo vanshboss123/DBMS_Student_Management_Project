@@ -1,0 +1,11 @@
+flowchart LR
+  D[departments] --> P[programs]
+  P --> S[students]
+  D --> I[instructors]
+  P --> C[courses]
+  C --> O[course_offerings]
+  I --> O
+  S --> E[enrollments]
+  O --> E
+  E --> A[attendance]
+  S --> AU[student_audit]
